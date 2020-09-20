@@ -1,0 +1,116 @@
+.sign-up__page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.sign-up__container {
+  width: 100%;
+  min-height: 100%;
+  background-color: #444444;
+  display: flex;
+  flex-direction: column;
+}
+
+header.sign-up__header-container {
+  padding: 1rem;
+  font-size: 1.4rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #747171;
+  flex-shrink: 0;
+}
+
+main.sign-up__main-container {
+  padding: 1rem;
+  flex-grow: 1;
+  flex-shrink: 2;
+  display: flex;
+  align-items: center;
+}
+
+footer.sign-up__footer-container {
+  padding: 1rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+main.sign-up__main-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.sign-up__input-container {
+  padding: 1rem;
+  width: 100%;
+}
+
+.sign-up__container .sign-up__input {
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 0;
+  min-width: 100%;
+  background-color: #616161;
+  color: #fff;
+}
+
+.sign-up__container .sign-up__input::placeholder {
+  color: rgb(207, 207, 207);
+}
+
+.sign-up__container .sign-up__action-button {
+  padding: 0.75rem 2rem;
+  border: 0;
+  margin-top: 0.75rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #e94560;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sign-up__footer-container .sign-up__footer-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.sign-up__footer-container .sign-up__info {
+  color: #fff;
+}
+
+.sign-up__footer-container .sign-up__link {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: #3fa0fb;
+}
+
+.sign-up__footer-container .sign-up__link:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 350px) {
+  .sign-up__footer-container .sign-up__footer-info-container {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .sign-up__container {
+    min-height: auto;
+    max-width: 500px;
+  }
+
+  main.sign-up__main-container {
+    flex-grow: 0;
+  }
+}
