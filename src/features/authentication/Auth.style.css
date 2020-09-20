@@ -1,11 +1,17 @@
-.sign-up__page-container {
+.auth__container {
+  height: 100%;
+}
+
+.sign-up__page-container,
+.sign-in__page-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 
-.sign-up__container {
+.sign-up__container,
+.sign-in__container {
   width: 100%;
   min-height: 100%;
   background-color: #444444;
@@ -13,7 +19,8 @@
   flex-direction: column;
 }
 
-header.sign-up__header-container {
+header.sign-up__header-container,
+header.sign-in__header-container {
   padding: 1rem;
   font-size: 1.4rem;
   color: #fff;
@@ -23,7 +30,8 @@ header.sign-up__header-container {
   flex-shrink: 0;
 }
 
-main.sign-up__main-container {
+main.sign-up__main-container,
+main.sign-in__main-container {
   padding: 1rem;
   flex-grow: 1;
   flex-shrink: 2;
@@ -31,7 +39,8 @@ main.sign-up__main-container {
   align-items: center;
 }
 
-footer.sign-up__footer-container {
+footer.sign-up__footer-container,
+footer.sign-in__footer-container {
   padding: 1rem;
   flex-shrink: 0;
   display: flex;
@@ -39,7 +48,8 @@ footer.sign-up__footer-container {
   flex-direction: column;
 }
 
-main.sign-up__main-container form {
+main.sign-up__main-container form,
+main.sign-in__main-container form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,12 +57,14 @@ main.sign-up__main-container form {
   width: 100%;
 }
 
-.sign-up__input-container {
+.sign-up__input-container,
+.sign-in__input-container {
   padding: 1rem;
   width: 100%;
 }
 
-.sign-up__container .sign-up__input {
+.sign-up__container .sign-up__input,
+.sign-in__container .sign-in__input {
   padding: 0.8rem;
   border-radius: 5px;
   border: 0;
@@ -61,11 +73,13 @@ main.sign-up__main-container form {
   color: #fff;
 }
 
-.sign-up__container .sign-up__input::placeholder {
+.sign-up__container .sign-up__input::placeholder,
+.sign-in__container .sign-in__input::placeholder {
   color: rgb(207, 207, 207);
 }
 
-.sign-up__container .sign-up__action-button {
+.sign-up__container .sign-up__action-button,
+.sign-in__container .sign-in__action-button {
   padding: 0.75rem 2rem;
   border: 0;
   margin-top: 0.75rem;
@@ -76,7 +90,8 @@ main.sign-up__main-container form {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.sign-up__footer-container .sign-up__footer-info-container {
+.sign-up__footer-container .sign-up__footer-info-container,
+.sign-in__footer-container .sign-in__footer-info-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,33 +99,39 @@ main.sign-up__main-container form {
   padding: 0.5rem;
 }
 
-.sign-up__footer-container .sign-up__info {
+.sign-up__footer-container .sign-up__info,
+.sign-in__footer-container .sign-in__info {
   color: #fff;
 }
 
-.sign-up__footer-container .sign-up__link {
+.sign-up__footer-container .sign-up__link,
+.sign-in__footer-container .sign-in__link {
   cursor: pointer;
   margin-left: 0.5rem;
   color: #3fa0fb;
 }
 
-.sign-up__footer-container .sign-up__link:hover {
+.sign-up__footer-container .sign-up__link:hover,
+.sign-in__footer-container .sign-in__link:hover {
   text-decoration: underline;
 }
 
 @media only screen and (min-width: 350px) {
-  .sign-up__footer-container .sign-up__footer-info-container {
+  .sign-up__footer-container .sign-up__footer-info-container,
+  .sign-in__footer-container .sign-in__footer-info-container {
     flex-direction: row;
   }
 }
 
 @media only screen and (min-width: 720px) {
-  .sign-up__container {
+  .sign-up__container,
+  .sign-in__container {
     min-height: auto;
     max-width: 500px;
   }
 
-  main.sign-up__main-container {
+  main.sign-up__main-container,
+  main.sign-in__main-container {
     flex-grow: 0;
   }
 }
