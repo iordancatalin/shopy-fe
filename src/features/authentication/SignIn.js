@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function SignIn() {
   return (
@@ -32,11 +33,11 @@ export default function SignIn() {
         <footer className='sign-in__footer-container'>
           <div className='sign-in__footer-info-container'>
             <span className='sign-in__info'>Don't have an account?</span>
-            <span className='sign-in__link'>Sign up</span>
+            <Link className='global__link' to='/sign-up'>Sign up</Link>
           </div>
           <div className='sign-in__footer-info-container'>
             <span className='sign-in__info'>Forgetten your password?</span>
-            <span className='sign-in__link'>Reset password</span>
+            <span className='global__link'>Reset password</span>
           </div>
         </footer>
       </div>

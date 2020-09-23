@@ -90,6 +90,12 @@ main.sign-in__main-container form {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.sign-up__container .sign-up__action-button:disabled,
+.sign-in__container .sign-in__action-button:disabled {
+  cursor: unset;
+  background-color: #ce6d7e;
+}
+
 .sign-up__footer-container .sign-up__footer-info-container,
 .sign-in__footer-container .sign-in__footer-info-container {
   display: flex;
@@ -102,18 +108,6 @@ main.sign-in__main-container form {
 .sign-up__footer-container .sign-up__info,
 .sign-in__footer-container .sign-in__info {
   color: #fff;
-}
-
-.sign-up__footer-container .sign-up__link,
-.sign-in__footer-container .sign-in__link {
-  cursor: pointer;
-  margin-left: 0.5rem;
-  color: #3fa0fb;
-}
-
-.sign-up__footer-container .sign-up__link:hover,
-.sign-in__footer-container .sign-in__link:hover {
-  text-decoration: underline;
 }
 
 @media only screen and (min-width: 350px) {

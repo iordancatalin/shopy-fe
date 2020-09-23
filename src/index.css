@@ -23,3 +23,14 @@ body {
 .font__montserrat {
   font-family: 'Montserrat';
 }
+
+.global__link {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: #3fa0fb;
+  text-decoration: none;
+}
+
+.global__link:hover {
+  text-decoration: underline;
+}
