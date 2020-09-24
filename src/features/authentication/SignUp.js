@@ -6,9 +6,9 @@ export default function SignUp() {
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState();
 
   const history = useHistory();
-
 
   const handleChange = (event, setter) => {
     const { value } = event.target;
@@ -18,7 +18,15 @@ export default function SignUp() {
   const isFormValid = () =>
     username && emailAddress && password && confirmPassword;
 
+  const passworsMatch = () => password && password === confirmPassword;
+
   const handleSignUpClick = async () => {
+    
+    if (!passworsMatch()) {
+      setErrorMessage(`Passwords don't match`);
+      return;
+    }
+
     const payload = { username, emailAddress, password };
 
     const response = await fetch('http://localhost:8080/api/v1/sign-up', {
@@ -29,8 +37,18 @@ export default function SignUp() {
       body: JSON.stringify(payload),
     });
 
-    if(response.status === 200) { history.push('/confirm-email'); }
+    if (response.status === 400) { setErrorMessage('Email address already exists'); }
+
+    if (response.status === 200) { history.push('/confirm-email'); }
   };
+
+  const errorComponent = errorMessage && (
+    <div className='sign-up__input-container'>
+      <div className='auth__error-container font__monserrat'>
+        {errorMessage}
+      </div>
+    </div>
+  );
 
   return (
     <div className='sign-up__page-container'>
@@ -40,6 +58,7 @@ export default function SignUp() {
         </header>
 
         <main className='sign-up__main-container'>
+          {errorComponent}
           <form>
             <div className='sign-up__input-container'>
               <input
